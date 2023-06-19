@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import folium
+import inflection
 from folium.plugins import MarkerCluster
 from PIL import Image
 from streamlit_folium import folium_static
@@ -269,7 +270,7 @@ df = df_raw.copy()
 
 #------------Limpeza---------------------------------------------------------------#
 
-clean_code(df)
+df = clean_code(df)
   
 
 # ==========================================================================================================
