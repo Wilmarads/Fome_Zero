@@ -184,13 +184,13 @@ def City_Restaurant(df):
     Output: Gráfico'''
     df_City_Restaurant = df.loc[:, ["restaurant_id", "country_code","city"]].groupby(["country_code", "city"]).nunique().sort_values(["restaurant_id", "city"], ascending=[False,True]).reset_index()
     df_City_Restaurant.columns=["País", "Cidade", "Qtd de restaurantes"]
-    df_City_Restaurant["Pais"] = df_City_Restaurant["País"].apply(unidecode.unidecode)
+    df_City_Restaurant["País"] = df_City_Restaurant["País"].apply(unidecode.unidecode)
     df_City_Restaurant = df_City_Restaurant.sort_values(["Qtd de restaurantes", "País"], ascending=[False, True])
     fig = px.bar(
     df_City_Restaurant[:10],
     x="Cidade",
     y="Qtd de restaurantes",
-    color="Pais",
+    color="País",
     title="Cidades com maior quantidade de restaurantes registrados",
     )
     fig = fig.update_traces(textposition="inside", text=df_City_Restaurant["Qtd de restaurantes"])
