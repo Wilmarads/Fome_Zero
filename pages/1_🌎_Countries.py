@@ -296,7 +296,7 @@ st.sidebar.markdown( """---""" )
 st.sidebar.markdown( '## Eat wherever you are!' )
 
 # Filtro de país
-linhas_selecionadas = df['country_code'].isin( country_options )
+linhas_selecionadas = df["country_code"].isin( country_options )
 df = df.loc[linhas_selecionadas, :]
 
 # =======================================
