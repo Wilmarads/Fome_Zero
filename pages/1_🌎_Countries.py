@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import folium
+pip install inflection
 import inflection
 from folium.plugins import MarkerCluster
 from PIL import Image
