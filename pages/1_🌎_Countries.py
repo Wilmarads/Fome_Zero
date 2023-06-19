@@ -3,7 +3,6 @@ from numpy.lib.shape_base import column_stack
 import pandas as pd
 import numpy as np
 import streamlit as st
-import unidecode
 import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
