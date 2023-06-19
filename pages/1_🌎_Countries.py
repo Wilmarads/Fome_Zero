@@ -66,20 +66,20 @@ def rename_columns(df):
 
 #3. Para limpeza do DF
 def clean_code (df):
-    ''' Esta função realiza a limpeza dos dados.
-        Tipos de função:
-        1. Retira linhas nulas coluna a coluna;
-        2. Retira tipo de culinária descrito como: "culinária mineira" e "mineira" do dataframe;
-        3. Elimina linhas nulas;
-        4. Elimina colunas nulas;
-        5. Elimina colunas que possam conter nan ou nulo;
-        6. Elimina colunas linhas duplicadas;
-        7. Transformando todos os elementos da coluna Cuisines em string;
-        8. Selecionar sempre a primeira opção da linhas que contenha mais de um tipo de culinária para quando da avaliação de valores;
-        9. Aciona a função que renomeia as colunas do df original.
-                
-        Input: DataFrame 
-        Output: DataFrame'''
+''' Esta função realiza a limpeza dos dados.
+    Tipos de função:
+    1. Retira linhas nulas coluna a coluna;
+    2. Retira tipo de culinária descrito como: "culinária mineira" e "mineira" do dataframe;
+    3. Elimina linhas nulas;
+    4. Elimina colunas nulas;
+    5. Elimina colunas que possam conter nan ou nulo;
+    6. Elimina colunas linhas duplicadas;
+    7. Transformando todos os elementos da coluna Cuisines em string;
+    8. Selecionar sempre a primeira opção da linhas que contenha mais de um tipo de culinária para quando da avaliação de valores;
+    9. Aciona a função que renomeia as colunas do df original.
+
+    Input: DataFrame 
+    Output: DataFrame'''
     df = df.loc[df["Restaurant ID"].notnull(), :]
     df = df.loc[df["Restaurant Name"].notnull(), :]
     df = df.loc[df["Country Code"].notnull(), :]
