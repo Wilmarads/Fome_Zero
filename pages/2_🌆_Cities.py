@@ -172,7 +172,7 @@ def df_Restaurant_City_Delivery_online(df):
     return df_Restaurant_City_Delivery_online
 
 #7. Cria gráfico de top 10 de cidades com maior quantidade de restaurantes registrados
-def df_City_Restaurant(df):
+def City_Restaurant(df):
     ''' Esta função realiza a seleção das cidades com maior quantidade de restaurantes registrados em sua base.
     Tipos de função:
     1. Seleciona as colunas de restaurante, país e cidade;
@@ -317,7 +317,7 @@ with st.container():
         
 with st.container():
     st.title( 'Top 10' )
-    fig = df_City_Restaurant(df)
+    fig = City_Restaurant(df)
     st.plotly_chart(fig, use_container_width=True)
 
     
