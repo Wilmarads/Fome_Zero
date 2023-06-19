@@ -1,6 +1,6 @@
 #-----------Bibliotecas------------------------------------------------------------#
 from numpy.lib.shape_base import column_stack
-import pandas as pd
+python import pandas as pd 
 import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
@@ -287,7 +287,7 @@ st.sidebar.markdown( """---""" )
 
 st.sidebar.markdown( '# Filtros' )
 
-country_select = st.sidebar.multiselect( 
+country_options = st.sidebar.multiselect( 
     'Selecione o país que deseja visualizar o restaurante',
     ['India', 'Australia', 'Brazil', 'Canada', 'Indonesia', 'New Zeland', 'Philippines', 'Qatar', 'Singapure', 'South Africa', 'Sri Lanka', 'Turkey', 'United Arab Emirates', 'England', 'United States of America'], 
     default=['India', 'Australia', 'Brazil', 'Canada', 'Indonesia', 'New Zeland', 'Philippines', 'Qatar', 'Singapure', 'South Africa', 'Sri Lanka', 'Turkey', 'United Arab Emirates', 'England', 'United States of America'])
@@ -299,7 +299,7 @@ st.sidebar.markdown( """---""" )
 st.sidebar.markdown( '## Eat wherever you are!' )
 
 # Filtro de país
-linhas_selecionadas = df['country_code'].isin( country_select )
+linhas_selecionadas = df['country_code'].isin( country_options )
 df = df.loc[linhas_selecionadas, :]
 
 # =======================================
