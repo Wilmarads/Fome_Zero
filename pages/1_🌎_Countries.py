@@ -9,7 +9,6 @@ import plotly.graph_objects as go
 import folium
 from folium.plugins import MarkerCluster
 from PIL import Image
-from geopy.geocoders import Nominatim
 from IPython.display import display
 from streamlit_folium import folium_static
 
