@@ -1,19 +1,20 @@
 #-----------Bibliotecas------------------------------------------------------------#
 from numpy.lib.shape_base import column_stack
-import pandas as pd
+import pandas as pd 
 import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import folium
+import inflection
 from folium.plugins import MarkerCluster
 from PIL import Image
 from streamlit_folium import folium_static
 
 
+st.set_page_config(page_title="Países", page_icon="🌎", layout="wide")
 
-st.set_page_config(page_title="Culinária", page_icon="🍔", layout="wide")
 #-------------Funções--------------------------------------------------------------#
 
 #1. Para colocar o nome dos países com base no código de cada país
@@ -77,7 +78,7 @@ def clean_code (df):
         7. Transformando todos os elementos da coluna Cuisines em string;
         8. Selecionar sempre a primeira opção da linhas que contenha mais de um tipo de culinária para quando da avaliação de valores;
         9. Aciona a função que renomeia as colunas do df original.
-                
+
         Input: DataFrame 
         Output: DataFrame'''
     df = df.loc[df["Restaurant ID"].notnull(), :]
@@ -114,8 +115,8 @@ def clean_code (df):
     df["Cuisines"] = df["Cuisines"].astype(str)
     df["Cuisines"] = df.loc[:, "Cuisines"].apply(lambda x: str(x).split(",")[0])
     df["Country Code"] = df["Country Code"].map(country_name)
-    df = rename_columns(df)
     return df
+
 
 #4. Função para criar o filtro de quantidade de restaurantes
 def filter_restaurants(df, num_restaurants):
