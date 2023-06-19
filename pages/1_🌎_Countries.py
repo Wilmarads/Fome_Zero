@@ -7,7 +7,8 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import folium
-import inflection
+import inflection.titleize
+import inflection.underscore
 from folium.plugins import MarkerCluster
 from PIL import Image
 from streamlit_folium import folium_static
@@ -115,7 +116,6 @@ def clean_code (df):
     df["Cuisines"] = df["Cuisines"].astype(str)
     df["Cuisines"] = df.loc[:, "Cuisines"].apply(lambda x: str(x).split(",")[0])
     df["Country Code"] = df["Country Code"].map(country_name)
-    df = rename_columns(df)
     return df
 
 #4. Para exibição de gráfico com a quantidade restaurantes registrados por país
