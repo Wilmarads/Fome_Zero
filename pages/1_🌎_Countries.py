@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import folium
-import inflection.titleize
-import inflection.underscore
+import inflection
+import Underscore
 from folium.plugins import MarkerCluster
 from PIL import Image
 from streamlit_folium import folium_static
