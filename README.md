@@ -95,7 +95,7 @@ e. Distribuição de países em Maior quantidade de Restaurantes que Fazem Entre
 3. A média de avaliações não acompanha a quantidade de restaurantes registrados. 
 
 ## 5. O produto final do projeto 
-Painel online, hospedado em um Cloud e disponível para acesso em qualquer dispositivo conectado à internet. O painel pode ser acessado através desse link: https://project-currycompany.streamlit.app/ 
+Painel online, hospedado em um Cloud e disponível para acesso em qualquer dispositivo conectado à internet. O painel pode ser acessado através desse link: [https://project-currycompany.streamlit.app/](https://wilmarads-fome-zero.streamlit.app/) 
 
 ## 6. Conclusão 
 
